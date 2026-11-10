@@ -1,15 +1,35 @@
-# Global Carbon Inequality: Lorenz Curve Analysis
+# Global Carbon Inequality: A Lorenz Curve Analysis
 
 Author: Atiq Kainan Ahmed. Email: atiqka@yahoo.com
 
-This repository contains a Python-based analytical pipeline to measure and visualize global $\text{CO}_2$ emissions inequality across countries. By combining macroeconomic population data with the Our World in Data (OWID) $\text{CO}_2$ dataset, this project moves beyond traditional income-group comparisons to highlight structural differences between higher-emitting and lower-emitting nations.
+The combined output plot is here lorenz_framing4_combined.png
+
+
+## Overview
+
+This repository provides a reproducible, Python-based analytical pipeline designed to measure, decompose, and visualize global $\text{CO}_2$ emissions inequality across nations. By integrating macroeconomic population records with the Our World in Data (OWID) $\text{CO}_2$ dataset, the project moves beyond conventional World Bank income-group classifications to reveal the structural divide between higher-emitting and lower-emitting countries.
+
+### Why Move Beyond Income-Group Comparisons?
+Traditional climate-inequality analyses often group countries by Gross National Income (GNI) per capita (e.g., *High income*, *Upper middle income*, *Lower middle income*, *Low income*). While useful for economic benchmarking, income brackets frequently obscure carbon inequality:
+- **Carbon Heterogeneity within Income Tiers:** High-income countries with service-driven economies or high renewable/nuclear energy shares often have markedly lower per-capita emissions than fossil-fuel-exporting nations in the same—or even lower—income brackets.
+- **Masking Global Concentration:** Calculating separate Lorenz curves and Gini coefficients *within* each income group measures internal dispersion rather than showing how much of the global carbon budget is consumed by the highest-emitting populations worldwide.
+
+### What This Pipeline Delivers
+To address these limitations, this project implements **four complementary analytical framings** using population-weighted Lorenz curves and Gini coefficients:
+1. **Global Carbon Inequality (Global Ranking):** Ranks the entire matched global population by national per-capita emissions to quantify the exact share of global $\text{CO}_2$ driven by the lowest- vs. highest-emitting populations.
+2. **Emission-Tier Faceting:** Replaces economic income brackets with explicit per-capita emission thresholds ($<3\text{t}$, $3\text{–}8\text{t}$, $8\text{–}15\text{t}$, $>15\text{t}$ per capita) to isolate structural inequality within distinct carbon-intensity regimes.
+3. **Comparative Bloc Overlay:** Contrasts the internal inequality of the top $50\%$ ("Higher-Emitting Bloc") against the bottom $50\%$ ("Lower-Emitting Bloc") on a single coordinate plane.
+4. **Unified Synthesis View:** Combines the global trajectory, emission-tier color segmentation, and bloc-level overlays into one comprehensive diagnostic figure.
+
+Together, these outputs provide researchers, policymakers, and data analysts with a clearer lens on both **where global emissions are concentrated** and **how inequality behaves within different carbon regimes**.
+
 
 ---
 
 ## Methodology
 
 ### 1. Data Acquisition & Harmonization
-* **Emissions Data:** The pipeline dynamically fetches the latest release of the [Our World in Data (OWID) CO₂ Dataset](https://github.com/owid/co2-data). It filters the dataset to the most recent available year ($t_{\max}$) and drops records missing `co2_per_capita`.
+* **Emissions Data:** The pipeline dynamically fetches the latest release of the Our World in Data (OWID) CO₂ Dataset. It filters the dataset to the most recent available year ($t_{\max}$) and drops records missing `co2_per_capita`.
 * **Macroeconomic & Population Data:** A local macroeconomic dataset (`macro6_data_17Jan2025.csv`) provides country-level population (`pop`) and World Bank income group classifications (`inc_grp`).
 * **Data Cleaning & Merging:** Country names in both datasets are standardized by stripping leading/trailing whitespace. An inner join is performed on `countryname` to ensure that only matched, complete cases with valid population and per-capita emission figures are retained for analysis.
 
@@ -47,11 +67,14 @@ Traditional analyses often facet countries by World Bank income groups, which me
 
 ---
 
-## 📈 Narrative of Results
+## Narrative of Results
 
 * **Global Concentration (Framing 1):** The global carbon Lorenz curve bows sharply away from the $45^\circ$ line of equality. A disproportionately large share of the global population resides in the flatter, lower-left portion of the curve, contributing a relatively small fraction of total global $\text{CO}_2$ emissions. Conversely, the curve steepens dramatically in the upper deciles, where high-emitting nations drive the bulk of cumulative global emissions.
+* 
 * **Intra-Tier Dynamics (Framing 2):** When countries are grouped by per-capita emission thresholds rather than income, internal inequality (measured by the Gini coefficient) is notably lower within the *Moderate* and *High* emitter tiers compared to the *Low* emitter tier. The *Low Emitters ($<3\text{t}$)* facet captures a wide spectrum of developing nations ranging from near-zero per-capita emissions to industrializing economies approaching $3\text{t}$.
+* 
 * **Bloc Comparison (Framing 3):** Overlaying the Higher-Emitting Bloc ($\ge \text{median}$) and Lower-Emitting Bloc ($< \text{median}$) reveals that internal inequality is often more pronounced within the Lower-Emitting Bloc than within the Higher-Emitting Bloc, as the latter clusters around high-consumption industrial baselines.
+* 
 * **Synthesized Trajectory (Framing 4):** The combined plot pinpoints the exact cumulative population thresholds where each emission tier takes over. The transition from green ($<3\text{t}$) to orange ($3\text{--}8\text{t}$) and red/indigo ($>8\text{t}$) visually demonstrates how rapidly cumulative emissions accelerate once the curve enters the upper-emitting tiers.
 
 ---
@@ -69,8 +92,8 @@ Traditional analyses often facet countries by World Bank income groups, which me
 
 ## Data Sources & Requirements
 
-* **$\text{CO}_2$ Data:** [Our World in Data (OWID) $\text{CO}_2$ Dataset](https://github.com/owid/co2-data) (automatically fetched via raw GitHub URL for the latest available year).
-* **Macro & Population Data:** Local CSV (`macro6_data_17Jan2025.csv`) containing `countryname`, `inc_grp`, and `pop`.
+* **$\text{CO}_2$ Data:** Our World in Data (OWID) $\text{CO}_2$ Dataset (automatically fetched via raw GitHub URL for the latest available year).
+* **Population and Facet Data:** Local CSV containing `countryname`, `inc_grp`, and `pop`.
 
 ### Dependencies
 ```bash
@@ -82,4 +105,6 @@ Update `MACRO_FILE` and `OUTPUT_DIR` in the script to match your local environme
 ```bash
 python lorenz_analysis.py
 ```
+
+### License
 

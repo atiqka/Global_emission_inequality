@@ -100,11 +100,6 @@ Traditional analyses often facet countries by World Bank income groups, which me
 pip install pandas numpy matplotlib ineqpy
 ```
 
-### Usage
-Update `MACRO_FILE` and `OUTPUT_DIR` in the script to match your local environment, then run:
-```bash
-python lorenz_analysis.py
-```
 
 ### License
 

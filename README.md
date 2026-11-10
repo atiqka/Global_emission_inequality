@@ -1,8 +1,8 @@
-# Global Carbon Inequality: A Lorenz Curve Analysis
+# Global Carbon Inequality, Situated Reality of Climate Change: A Lorenz Curve Analysis
 
 Author: Atiq Kainan Ahmed. Email: atiqka@yahoo.com
 
-The combined output plot is here lorenz_framing4_combined.png
+The combined output plot https://github.com/atiqka/global_emission_inequality/blob/main/lorenz_framing4_combined.png
 
 
 ## Overview

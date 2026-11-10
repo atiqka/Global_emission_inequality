@@ -2,12 +2,12 @@
 
 Author: Atiq Kainan Ahmed. Email: atiqka@yahoo.com
 
-The combined output plot https://github.com/atiqka/global_emission_inequality/blob/main/lorenz_framing4_combined.png
+The combined output plot of all 3 framings is shown here https://github.com/atiqka/global_emission_inequality/blob/main/lorenz_framing4_combined.png
 
 
 ## Overview
 
-This repository provides a reproducible, Python-based analytical pipeline designed to measure, decompose, and visualize global $\text{CO}_2$ emissions inequality across nations. By integrating macroeconomic population records with the Our World in Data (OWID) $\text{CO}_2$ dataset, the project moves beyond conventional World Bank income-group classifications to reveal the structural divide between higher-emitting and lower-emitting countries.
+This repository developed by Atiq Kainan Ahmed provides a reproducible, Python-based analytical pipeline designed to measure, decompose, and visualize global $\text{CO}_2$ emissions inequality across nations. By integrating macroeconomic population records with the Our World in Data (OWID) $\text{CO}_2$ dataset, the project moves beyond conventional World Bank income-group classifications to reveal the structural divide between higher-emitting and lower-emitting countries.
 
 ### Why Move Beyond Income-Group Comparisons?
 Traditional climate-inequality analyses often group countries by Gross National Income (GNI) per capita (e.g., *High income*, *Upper middle income*, *Lower middle income*, *Low income*). While useful for economic benchmarking, income brackets frequently obscure carbon inequality:

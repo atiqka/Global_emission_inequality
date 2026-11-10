@@ -1,4 +1,4 @@
-# Global Carbon Emission Inequality, Moving Reality of Climate Change: A Lorenz Curve Analysis
+# Global Carbon Emission Inequality, Moving Reality of Climate Change
 
 Author: Atiq Kainan Ahmed. Email: atiqka@yahoo.com
 

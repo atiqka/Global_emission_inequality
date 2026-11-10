@@ -61,13 +61,13 @@ Traditional analyses often facet countries by World Bank income groups, which me
 
 ## Results
 
-* **Global Concentration (Framing 1):** The global carbon Lorenz curve bows sharply away from the $45^\circ$ line of equality. A disproportionately large share of the global population resides in the flatter, lower-left portion of the curve, contributing a relatively small fraction of total global $\text{CO}_2$ emissions. Conversely, the curve steepens dramatically in the upper deciles, where high-emitting nations drive the bulk of cumulative global emissions.
+* **Global Concentration (Framing 1):** The global carbon Lorenz curve bows sharply away from the $45^\circ$ line of equality. A disproportionately large share of the global population resides in the flatter, lower-left portion of the curve, contributing a relatively small fraction of total global $\text{CO}_2$ emissions. Conversely, the curve steepens dramatically in the upper deciles, where high-emitting nations drive the bulk of cumulative global emissions. Output plot (Framing 1): https://github.com/atiqka/global_emission_inequality/blob/main/lorenz_framing1_global.png
 * 
-* **Intra-Tier Dynamics (Framing 2):** When countries are grouped by per-capita emission thresholds rather than income, internal inequality (measured by the Gini coefficient) is notably lower within the *Moderate* and *High* emitter tiers compared to the *Low* emitter tier. The *Low Emitters ($<3\text{t}$)* facet captures a wide spectrum of developing nations ranging from near-zero per-capita emissions to industrializing economies approaching $3\text{t}$.
+* **Intra-Tier Dynamics (Framing 2):** When countries are grouped by per-capita emission thresholds rather than income, internal inequality (measured by the Gini coefficient) is notably lower within the *Moderate* and *High* emitter tiers compared to the *Low* emitter tier. The *Low Emitters ($<3\text{t}$)* facet captures a wide spectrum of developing nations ranging from near-zero per-capita emissions to industrializing economies approaching $3\text{t}$. Output plot (Framing 2): https://github.com/atiqka/global_emission_inequality/blob/main/lorenz_framing2_emission_tiers.png
 * 
-* **Bloc Comparison (Framing 3):** Overlaying the Higher-Emitting Bloc ($\ge \text{median}$) and Lower-Emitting Bloc ($< \text{median}$) reveals that internal inequality is often more pronounced within the Lower-Emitting Bloc than within the Higher-Emitting Bloc, as the latter clusters around high-consumption industrial baselines.
+* **Bloc Comparison (Framing 3):** Overlaying the Higher-Emitting Bloc ($\ge \text{median}$) and Lower-Emitting Bloc ($< \text{median}$) reveals that internal inequality is often more pronounced within the Lower-Emitting Bloc than within the Higher-Emitting Bloc, as the latter clusters around high-consumption industrial baselines. Output plot (Framing 3): https://github.com/atiqka/global_emission_inequality/blob/main/lorenz_framing3_comparative_overlay.png
 * 
-* **Synthesized Trajectory (Framing 4):** The combined plot pinpoints the exact cumulative population thresholds where each emission tier takes over. The transition from green ($<3\text{t}$) to orange ($3\text{--}8\text{t}$) and red/indigo ($>8\text{t}$) visually demonstrates how rapidly cumulative emissions accelerate once the curve enters the upper-emitting tiers.
+* **Synthesized Trajectory (Framing 4):** The combined plot pinpoints the exact cumulative population thresholds where each emission tier takes over. The transition from green ($<3\text{t}$) to orange ($3\text{--}8\text{t}$) and red/indigo ($>8\text{t}$) visually demonstrates how rapidly cumulative emissions accelerate once the curve enters the upper-emitting tiers. Output plot (Combined): https://github.com/atiqka/global_emission_inequality/blob/main/lorenz_framing4_combined.png
 
 ---
 
@@ -81,12 +81,15 @@ Traditional analyses often facet countries by World Bank income groups, which me
    The wider internal spread within the *Low Emitters* tier reflects countries at very different stages of energy access and industrialization. For nations in this tier, climate policy must balance poverty alleviation and energy expansion with leapfrogging toward low-carbon infrastructure.
 
 
-## Visual Outputs
+## Output plots
 
-* Framing 1 output. Global Carbon Lorenz Curve:  
-* Framing 2 output. $2 \times 2$ Facet Grid by Per-Capita Emission Tiers: 
-* Framing 3 output. High vs. Low Emitter Bloc Overlay.
-* Combined All-in-One Synthesis Plot of framing 1, 2 & 3): https://github.com/atiqka/global_emission_inequality/blob/main/lorenz_framing4_combined.png
+* Framing 1 output. Global Carbon Lorenz Curve: https://github.com/atiqka/global_emission_inequality/blob/main/lorenz_framing1_global.png
+
+* Framing 2 output. $2 \times 2$ Facet Grid by Per-Capita Emission Tiers: https://github.com/atiqka/global_emission_inequality/blob/main/lorenz_framing2_emission_tiers.png
+
+* Framing 3 output. High vs. Low Emitter Bloc Overlay. https://github.com/atiqka/global_emission_inequality/blob/main/lorenz_framing3_comparative_overlay.png
+  
+* Combined All-in-One Synthesis Plot (framing 1, 2 & 3): https://github.com/atiqka/global_emission_inequality/blob/main/lorenz_framing4_combined.png
 
 ---
 

@@ -29,6 +29,7 @@ Together, these outputs provide researchers, policymakers, and data analysts wit
 ## Methodology
 
 ### 1. Data Acquisition & Harmonization
+
 * **Emissions Data:** The pipeline dynamically fetches the latest release of the Our World in Data (OWID) CO₂ Dataset. It filters the dataset to the most recent available year ($t_{\max}$) and drops records missing `co2_per_capita`.
 * **Macroeconomic & Population Data:** A local macroeconomic dataset (`macro6_data_17Jan2025.csv`) provides country-level population (`pop`) and World Bank income group classifications (`inc_grp`).
 * **Data Cleaning & Merging:** Country names in both datasets are standardized by stripping leading/trailing whitespace. An inner join is performed on `countryname` to ensure that only matched, complete cases with valid population and per-capita emission figures are retained for analysis.
@@ -48,7 +49,7 @@ For a set of $N$ countries sorted in ascending order of per-capita $\text{CO}_2$
   $$G = 1 - \sum_{k=1}^{N} (X_k - X_{k-1})(Y_k + Y_{k-1})$$
   where $G \in [0, 1]$, with $0$ representing perfect equality (every person emits the exact same amount) and $1$ representing maximum inequality.
 
-### 3. Analytical Framing Design
+### 3. Analytical Framing Used
 Traditional analyses often facet countries by World Bank income groups, which measures *internal* inequality within income brackets rather than global carbon concentration. This pipeline implements four distinct framings:
 
 1. **Global Carbon Lorenz Curve:** Sorts all matched countries globally by `co2_per_capita` to capture the overarching global distribution of emissions across the entire world population.
@@ -58,16 +59,7 @@ Traditional analyses often facet countries by World Bank income groups, which me
 
 ---
 
-## Visual Outputs
-
-* `lorenz_framing1_global.png` — Global Carbon Lorenz Curve.
-* `lorenz_framing2_emission_tiers.png` — $2 \times 2$ Facet Grid by Per-Capita Emission Tiers.
-* `lorenz_framing3_comparative_overlay.png` — High vs. Low Emitter Bloc Overlay.
-* `lorenz_framing4_combined.png` — Combined All-in-One Synthesis Plot.
-
----
-
-## Narrative of Results
+## Results
 
 * **Global Concentration (Framing 1):** The global carbon Lorenz curve bows sharply away from the $45^\circ$ line of equality. A disproportionately large share of the global population resides in the flatter, lower-left portion of the curve, contributing a relatively small fraction of total global $\text{CO}_2$ emissions. Conversely, the curve steepens dramatically in the upper deciles, where high-emitting nations drive the bulk of cumulative global emissions.
 * 
@@ -79,7 +71,7 @@ Traditional analyses often facet countries by World Bank income groups, which me
 
 ---
 
-## Interpretation of Results
+## Interpretation
 
 1. **Why Income Groups Can Be Misleading:**
    Traditional World Bank income classifications (based on GNI per capita) frequently mask carbon inequality because high-income service economies with clean energy grids (e.g., nuclear or hydro) can have lower per-capita emissions than upper-middle-income fossil-fuel exporters. Faceting by **emission tiers** isolates carbon intensity directly.
@@ -87,6 +79,14 @@ Traditional analyses often facet countries by World Bank income groups, which me
    The steepness of the upper-right segment in Framing 1 and Framing 4 underscores that global decarbonization efforts cannot rely solely on broad, uniform targets. Because the top emission tiers account for a massive share of cumulative $\text{CO}_2$, policy interventions targeting the $>8\text{t}$ and $>15\text{t}$ per-capita tiers yield the highest marginal reductions in global emissions.
 3. **Development vs. Decarbonization:**
    The wider internal spread within the *Low Emitters* tier reflects countries at very different stages of energy access and industrialization. For nations in this tier, climate policy must balance poverty alleviation and energy expansion with leapfrogging toward low-carbon infrastructure.
+
+
+## Visual Outputs
+
+* Framing 1 output. Global Carbon Lorenz Curve:  
+* Framing 2 output. $2 \times 2$ Facet Grid by Per-Capita Emission Tiers: 
+* Framing 3 output. High vs. Low Emitter Bloc Overlay.
+* Combined All-in-One Synthesis Plot of framing 1, 2 & 3): https://github.com/atiqka/global_emission_inequality/blob/main/lorenz_framing4_combined.png
 
 ---
 

@@ -2,7 +2,7 @@
 
 Author: Atiq Kainan Ahmed. Email: atiqka@yahoo.com
 
-The combined output plot is shown here https://github.com/atiqka/global_emission_inequality/blob/main/lorenz_framing4_combined.png
+An output plot is shown here https://github.com/atiqka/global_emission_inequality/blob/main/lorenz_framing2_emission_tiers.png
 
 
 ## Overview

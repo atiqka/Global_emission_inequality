@@ -4,12 +4,12 @@ Author: Atiq Kainan Ahmed. Email: atiqka@yahoo.com
 
 An output plot is shown here https://github.com/atiqka/global_emission_inequality/blob/main/lorenz_framing2_emission_tiers.png
 
+This repository, developed by Atiq Kainan Ahmed, provides a reproducible, Python-based analytical pipeline designed to measure, decompose, and visualize global CO2 emissions inequality across nations. By integrating macroeconomic population records with the global CO2 dataset, the exercise moves beyond conventional World Bank income-group classifications to reveal the structural divide between higher-emitting and lower-emitting countries. Lorenz curve-based analysis is presented for different framings and contexts. 
+
 
 ## Overview
 
 As global climate discussions increasingly emphasize climate justice and equitable carbon budgets, understanding the structural divides between high- and low-emitting nations has become essential. This exercise develops a population-weighted analytical pipeline to measure and visualize global CO2 emissions inequality, shifting the focus from aggregate national totals to the actual distribution of emissions across the global population.
-
-This repository, developed by Atiq Kainan Ahmed, provides a reproducible, Python-based analytical pipeline designed to measure, decompose, and visualize global CO2 emissions inequality across nations. By integrating macroeconomic population records with the global CO2 dataset, the project moves beyond conventional World Bank income-group classifications to reveal the structural divide between higher-emitting and lower-emitting countries. Lorenz curve-based analysis is presented for different framings and contexts. 
 
 ### Why Move Beyond Conventional Approaches?
 
@@ -43,7 +43,8 @@ These outputs provide researchers and practitioners with a clearer lens on both 
 ### 2. Data Acquisition & Harmonization
 
 * **Emissions Data:** The pipeline dynamically fetches the latest release of the Our World in Data (OWID) CO₂ Dataset. It filters the dataset to the most recent available year ($t_{\max}$) and drops records missing `co2_per_capita`.
-* **Macroeconomic & Population Data:** A local macroeconomic dataset (`macro6_data_17Jan2025.csv`) provides country-level population (`pop`) and World Bank income group classifications (`inc_grp`).
+
+* **Macroeconomic & Population Data:** A local macroeconomic dataset provides country-level population (`pop`) and World Bank income group classifications (`inc_grp`).
 
 * **Data Cleaning & Merging:** Country names in both datasets are standardized by stripping leading/trailing whitespace. An inner join is performed on `countryname` to ensure that only matched, complete cases with valid population and per-capita emission figures are retained for analysis.
 
@@ -64,6 +65,7 @@ For a set of $N$ countries sorted in ascending order of per-capita $\text{CO}_2$
   where $G \in [0, 1]$, with $0$ representing perfect equality (every person emits the exact same amount) and $1$ representing maximum inequality.
 
 ---
+
 
 ## Results
 
@@ -89,18 +91,6 @@ Findings from this exercise and its results highlight several structural takeawa
 
 * **Clear Divide Between High- and Low-Emitting Blocs:** Comparing the higher-emitting and lower-emitting blocs highlights a sharp structural gap in how the global carbon budget is used. Within the Low Emitters tier, the wider internal spread reflects countries at very different stages of energy access and industrialization. For nations in this tier, effective climate policy must balance poverty alleviation and energy expansion with leapfrogging toward low-carbon infrastructure.
 
-
-## Data Sources & Requirements
-
-* **$\text{CO}_2$ Data:** Our World in Data (OWID) $\text{CO}_2$ Dataset (automatically fetched via raw GitHub URL for the latest available year).
-
-* **Population and Facet Data:** Local CSV containing `countryname`, `inc_grp`, and `pop`.
-
-### Dependencies
-
-```bash
-pip install pandas numpy matplotlib ineqpy
-```
 
 
 ### License

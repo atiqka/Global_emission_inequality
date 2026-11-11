@@ -1,4 +1,4 @@
-# Global Carbon Emission Inequality, Moving Reality of Climate Change
+# Global Carbon Emission Inequality, Moving Beyond Conventional Approaches
 
 Author: Atiq Kainan Ahmed. Email: atiqka@yahoo.com
 

@@ -7,14 +7,22 @@ An output plot is shown here https://github.com/atiqka/global_emission_inequalit
 
 ## Overview
 
-This repository, developed by Atiq Kainan Ahmed, provides a reproducible, Python-based analytical pipeline designed to measure, decompose, and visualize global $\text{CO}_2$ emissions inequality across nations. By integrating macroeconomic population records with the Global Data $\text{CO}_2$ dataset, the project moves beyond conventional World Bank income-group classifications to reveal the structural divide between higher-emitting and lower-emitting countries. Lorenz curve-based analysis is presented for different framings and contexts. 
+As global climate discussions increasingly emphasize climate justice and equitable carbon budgets, understanding the structural divides between high- and low-emitting nations has become essential. This exercise develops a population-weighted analytical pipeline to measure and visualize global CO2 emissions inequality, shifting the focus from aggregate national totals to the actual distribution of emissions across the global population.
 
-### Why Move Beyond Conventional Approach?
-Traditional climate-inequality analyses often group countries by Gross National Income (GNI) per capita (e.g., *High income*, *Upper middle income*, *Lower middle income*, *Low income*). While useful for economic benchmarking, income brackets frequently obscure carbon inequality:
+This repository, developed by Atiq Kainan Ahmed, provides a reproducible, Python-based analytical pipeline designed to measure, decompose, and visualize global CO2 emissions inequality across nations. By integrating macroeconomic population records with the global CO2 dataset, the project moves beyond conventional World Bank income-group classifications to reveal the structural divide between higher-emitting and lower-emitting countries. Lorenz curve-based analysis is presented for different framings and contexts. 
 
-* **Carbon Heterogeneity within Income Tiers:** High-income countries with service-driven economies or high renewable/nuclear energy shares often have markedly lower per-capita emissions than fossil-fuel-exporting nations in the same—or even lower—income brackets.
+### Why Move Beyond Conventional Approaches?
 
-* **Masking Global Concentration:** Calculating separate Lorenz curves and Gini coefficients *within* each income group measures internal dispersion rather than showing how much of the global carbon budget is consumed by the highest-emitting populations worldwide.
+Traditional climate-inequality analyses often group countries by Gross National Income (GNI) per capita, such as High income, Upper middle income, Lower middle income, and Low income brackets. While valuable for economic benchmarking, these classifications frequently obscure carbon inequality due to two structural limitations:
+
+* **Carbon Heterogeneity within Income Tiers:** High-income countries with service-driven economies or high shares of renewable and nuclear energy often exhibit markedly lower per-capita emissions than fossil-fuel-exporting nations within the same, or even lower, income brackets.
+
+* **Masking Global Concentration:** Calculating separate Lorenz curves and Gini coefficients within each income group only measures internal dispersion, rather than revealing how globally aggregated carbon budgets are consumed by the highest-emitting populations worldwide.
+
+### Objectives
+
+To address these limitations, this exercise aims to: a) evaluate carbon inequality through population-weighted metrics that reflect true country size, b) contrast multiple structural framings (including global rankings, emission-tier faceting, and bloc comparisons) to isolate where emissions are concentrated, and c) produce publication-ready visual diagnostics to support climate policy and equity research.
+
 
 ## Methodology
 

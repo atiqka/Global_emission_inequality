@@ -77,29 +77,18 @@ For a set of $N$ countries sorted in ascending order of per-capita $\text{CO}_2$
 
 ---
 
-## Interpretation
+## Interpretation of the Findings
 
-1. **Why Income Groups Can Be Misleading:**
-   Traditional World Bank income classifications (based on GNI per capita) frequently mask carbon inequality because high-income service economies with clean energy grids (e.g., nuclear or hydro) can have lower per-capita emissions than upper-middle-income fossil-fuel exporters. Faceting by **emission tiers** isolates carbon intensity directly.
+Findings from this exercise and its results highlight several structural takeaways about global CO2 emissions when viewed through a population-weighted, per-capita lens:
 
-2. **The "Tail" Drives the Total:**
-   The steepness of the upper-right segment in Framing 1 and Framing 4 underscores that global decarbonization efforts cannot rely solely on broad, uniform targets. Because the top emission tiers account for a massive share of cumulative $\text{CO}_2$, policy interventions targeting the $>8\text{t}$ and $>15\text{t}$ per-capita tiers yield the highest marginal reductions in global emissions.
+* **A Small Share Drives Most Emissions:** The steepness of the upper-right segment in Framing 1 and Framing 4 shows that a relatively small portion of the world's population accounts for a disproportionately large share of total global CO2, while the lowest-emitting populations contribute only a tiny fraction. Put simply, on average, a person in a high-emitting country like Canada or Australia generates as much CO2 in just a few weeks as someone in Kenya, Bangladesh, or Nepal produces over an entire year. Because the top emission tiers drive the bulk of global emissions, decarbonization cannot rely solely on uniform targets; policy interventions focused on populations emitting above 8 tonnes and above 15 tonnes per capita yield the highest marginal reductions.
 
-3. **Development vs. Decarbonization:**
-   The wider internal spread within the *Low Emitters* tier reflects countries at very different stages of energy access and industrialization. For nations in this tier, climate policy must balance poverty alleviation and energy expansion with leapfrogging toward low-carbon infrastructure.
+* **Income Labels Do Not Tell the Whole Story:** Traditional World Bank income classifications based on GNI per capita frequently mask carbon inequality. High-income service economies with clean energy grids can have much lower per-capita emissions than upper-middle-income fossil-fuel exporters. Switzerland and Qatar are both high-income nations, yet Switzerland's reliance on hydro and nuclear power keeps its footprint around 3 to 4 tonnes per person, whereas fossil-fuel-producing Qatar exceeds 30 tonnes per person. Similarly, within the upper-middle-income tier, coal-heavy economies like South Africa or Kazakhstan sit in much higher emission tiers than renewable-powered Costa Rica. Faceting by emission tiers isolates carbon intensity directly.
 
+* **Population Weighting Matters:** Factoring in population size prevents small, high-emitting nations or large, low-emitting nations from skewing the picture, giving a much more accurate view of where emissions are truly concentrated. Without population weighting, smaller countries with very high per-capita rates like Palau, Bahrain, or Luxembourg would carry the same statistical weight as massive populations like India (over 1.4 billion people, averaging around 2 tonnes per person) or the United States (around 335 million people, averaging roughly 14 tonnes per person).
 
-## Output plots
+* **Clear Divide Between High- and Low-Emitting Blocs:** Comparing the higher-emitting and lower-emitting blocs highlights a sharp structural gap in how the global carbon budget is used. Within the Low Emitters tier, the wider internal spread reflects countries at very different stages of energy access and industrialization. For nations in this tier, effective climate policy must balance poverty alleviation and energy expansion with leapfrogging toward low-carbon infrastructure.
 
-* Framing 1 output. Global Carbon Lorenz Curve: https://github.com/atiqka/global_emission_inequality/blob/main/lorenz_framing1_global.png
-
-* Framing 2 output. $2 \times 2$ Facet Grid by Per-Capita Emission Tiers: https://github.com/atiqka/global_emission_inequality/blob/main/lorenz_framing2_emission_tiers.png
-
-* Framing 3 output. High vs. Low Emitter Bloc Overlay. https://github.com/atiqka/global_emission_inequality/blob/main/lorenz_framing3_comparative_overlay.png
-  
-* Combined All-in-One Synthesis Plot (framing 1, 2 & 3): https://github.com/atiqka/global_emission_inequality/blob/main/lorenz_framing4_combined.png
-
----
 
 ## Data Sources & Requirements
 

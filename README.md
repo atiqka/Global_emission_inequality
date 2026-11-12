@@ -37,7 +37,7 @@ To address these limitations, this exercise implements **four complementary anal
 
 4. **Unified Synthesis View:** Combines the global trajectory, emission-tier color segmentation, and bloc-level overlays into one comprehensive diagnostic figure. It maps the emission-tier segments directly onto the global Lorenz trajectory using color-coded segments, while superimposing the bloc-level curves as dashed reference lines.
 
-These outputs provide researchers and practitioners with a clearer lens on both where global emissions are concentrated** and how inequality behaves within different carbon regimes**.
+These outputs provide researchers and practitioners with a clearer lens on both where global emissions are concentrated and how inequality behaves within different carbon regimes.
 
 
 ### 2. Data Acquisition & Harmonization
